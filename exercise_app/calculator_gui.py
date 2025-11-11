@@ -24,7 +24,7 @@ def click(event):
 # --- Window Setup ---
 root = tk.Tk()
 root.title("Simple Calculator")
-root.geometry("320x420")
+root.geometry("320x500")
 root.resizable(False, False)
 
 # --- Input Field ---
@@ -68,6 +68,15 @@ for row in buttons:
         )
         btn.pack(side="left", padx=3, pady=3)
         btn.bind("<Button-1>", click)
+# --- Footer ---
+footer = tk.Label(
+    root,
+    text="© Copyright Aime Wyatt",
+    font=("Arial", 10, "italic"),
+    fg="gray",
+    bg="#f3f3f3"
+)
+footer.pack(side="bottom", fill="x", pady=5)
 
 # --- Start App ---
 root.mainloop()
